@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Information -->
+    <meta charset="utf-8">
+    <title>Detection and Identification of Pills</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="../static/img/favicon.png" rel="icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- External Libraries Stylesheets -->
+    <link href="../static/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Custom Bootstrap Stylesheet -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template-Specific Stylesheets -->
+    <link href="../static/css/index.css" rel="stylesheet">
+    <link href="../static/css/common.css" rel="stylesheet">
+
+    <!-- Chatbot Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script> <!-- Markdown Processing -->
+    <script src="https://karabo.ai/smart-js-chatbot-link/56ef5fe3-897b-4fa8-89c4-e3f642df290d/"></script> <!-- Chatbot Integration -->
+
+</head>
+
+<body>
+    <!-- Chatbot Container -->
+    <div id="chatbot-container"></div>
+
+    <!-- Main Wrapper -->
+    <div class="main-div">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <!-- Hamburger Menu for Mobile Screens -->
+            <div class="hamburger-menu">
+                <img src="../static/img/hamburger.png" alt="Menu">
+            </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <a href="{{ url_for('index')}}">
+                    <li>Home</li>
+                </a>
+                <a href="{{ url_for('abstract')}}">
+                    <li>Abstract</li>
+                </a>
+                <a href="{{ url_for('blog')}}">
+                    <li>Blog</li>
+                </a>
+                <div>
+                    <a href="{{ url_for('login')}}">
+                        <li class="navbar-login">Login<img src="../static/img/right-arrow.png" /></li>
+                    </a>
+                </div>
+            </ul>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Pill Detection</h1>
+            <h2>using MobileNet Architecture</h2>
+        </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
