@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta information for browser rendering and viewport settings -->
+    <meta charset="utf-8">
+    <title>Detection and Identification of Pills</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon (website icon) -->
+    <link href="../static/img/favicon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- External Libraries Stylesheets -->
+    <link href="../static/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Application-Specific Stylesheets -->
+    <link href="../static/css/index.css" rel="stylesheet">
+    <link href="../static/css/common.css" rel="stylesheet">
+    <link href="../static/css/abstract.css" rel="stylesheet">
+
+    <!-- Chatbot Integration Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script> <!-- Markdown processing for chatbot -->
+    <script src="https://karabo.ai/smart-js-chatbot-link/56ef5fe3-897b-4fa8-89c4-e3f642df290d/"></script> <!-- Chatbot setup -->
+</head>
+
+<body>
+    <!-- Chatbot Container -->
+    <div id="chatbot-container"></div>
+
+    <div class="main-div">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <!-- Hamburger Menu (visible on smaller screens) -->
+            <div class="hamburger-menu">
+                <img src="../static/img/hamburger.png" alt="Menu">
+            </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <a href="{{ url_for('index')}}"><li>Home</li></a>
+                <a href="{{ url_for('abstract')}}"><li>Abstract</li></a>
+                <a href="{{ url_for('blog')}}"><li>Blog</li></a>
+                <div>
+                    <a href="{{ url_for('login')}}"><li class="navbar-login">Login<img src="../static/img/right-arrow.png" /></li></a>
+                </div>
+            </ul>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Abstract</h1>
+            <h2 class="abstract-description">
+                <!-- Description about the project -->
+                In modern healthcare, accurate and efficient pill identification is essential for reducing medication errors, a significant cause of adverse drug reactions, hospital readmissions, and increased healthcare costs. This project presents a deep learning-based system designed specifically to address these issues by reliably detecting and identifying pills. The goal of this system is to minimize medication-related errors, thereby enhancing patient safety and supporting healthcare providers in their decision-making processes.
+
+                The system utilizes MobileNet, a lightweight convolutional neural network architecture known for its high accuracy and computational efficiency, making it suitable for deployment on both mobile and resource-limited devices. MobileNet’s architecture is optimized for image classification tasks and offers advantages in speed and accuracy by using depthwise separable convolutions, which reduce the computational load without compromising detection performance. This enables the system to perform pill identification quickly and accurately, even on mobile devices, which is particularly beneficial in clinical settings where real-time decisions are critical.
+                
+                By implementing this deep learning approach, the project not only automates feature extraction and classification, but also provides a scalable solution that can adapt to various pill types, colors, and shapes. As a result, this system has the potential to significantly improve healthcare efficiency, allowing professionals to identify medications accurately under diverse conditions, from bedside monitoring to pharmacy verification. This deep learning-based solution promises to become a valuable tool in healthcare, enhancing patient care by reducing the chances of medication errors and supporting healthcare providers in delivering accurate treatments.
+            </h2>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

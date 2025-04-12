@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Information for browser compatibility and SEO -->
+    <meta charset="utf-8">
+    <title>Detection and Identification of Pills</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="../static/img/favicon.png" rel="icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- External Libraries Stylesheets -->
+    <link href="../static/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Custom Bootstrap Stylesheet -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template-Specific Stylesheets -->
+    <link href="../static/css/login.css" rel="stylesheet">
+    <link href="../static/css/common.css" rel="stylesheet">
+
+    <!-- Chatbot Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script> <!-- Markdown Processing -->
+    <script src="https://karabo.ai/smart-js-chatbot-link/56ef5fe3-897b-4fa8-89c4-e3f642df290d/"></script> <!-- Chatbot Integration -->
+
+</head>
+
+<body>
+    <!-- Spinner Section (Loading Indicator) -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Navbar Section -->
+    <div class="navbar-container">
+        <nav class="navbar">
+            <!-- Hamburger Menu for Mobile Devices -->
+            <div class="hamburger-menu">
+                <img src="../static/img/hamburger.png" alt="Menu">
+            </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <a href="{{ url_for('index')}}">
+                    <li>Home</li>
+                </a>
+                <a href="{{ url_for('abstract')}}">
+                    <li>Abstract</li>
+                </a>
+                <a href="{{ url_for('blog')}}">
+                    <li>Blog</li>
+                </a>
+                <div>
+                    <a href="{{ url_for('login')}}">
+                        <li class="navbar-login">Login<img src="../static/img/right-arrow.png" /></li>
+                    </a>
+                </div>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Page Header -->
+    <div class="container-fluid page-header mb-5 py-5">
+        <div class="container">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Login</h1>
+        </div>
+    </div>
+
+    <!-- Login and Signup Form -->
+    <div class="login-container"> 
+        <div id="main">
+            <!-- Sign In Form -->
+            <h1 class="text-white">Sign In</h1>
+            <input id="email" type="text" placeholder="Email"></input>
+            <input id="password" type="password" placeholder="Password"></input>
+            <button id="submit">Submit</button>
+            <p><span>or</span></p>
+            <button id="sign-up">Sign Up</button>
+        </div>
+
+        <div id="create-acct">
+            <!-- Create Account Form -->
+            <h1 class="text-white">Create an Account</h1>
+            <input id="email-signup" type="text" placeholder="Email *"></input>
+            <input id="confirm-email-signup" type="email" placeholder="Confirm Email *"></input>
+            <input id="password-signup" type="password" placeholder="Password *"></input>
+            <input id="confirm-password-signup" type="password" placeholder="Confirm Password *"></input>
+            <button id="create-acct-btn">Create Account</button>
+            <button id="return-btn">Return to Login</button>
+        </div>
+    </div>
+
+    <!-- URL for Navigation -->
+    <script>
+        const recognizeUrl = "{{ url_for('recognize') }}";
+    </script>
+
+    <!-- Footer Section -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Footer Content -->
+                <div class="col-lg-3 col-md-6">
+                    A Deeplearning model which accurately identifies and detects pills.
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    Responsive Design
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    Nikhil Mukundan </br>Sayuj Sajeev</br>Nida Shirin</br>Lakshmi Krishnan
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Group 5</h4>
+                    <p>A Final year project.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <!-- Copyright Information -->
+                    </div>
+                    <div class="col-md-6 text-center text-md-end"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/lib/wow/wow.min.js"></script>
+    <script src="../static/lib/easing/easing.min.js"></script>
+    <script src="../static/lib/waypoints/waypoints.min.js"></script>
+    <script src="../static/lib/counterup/counterup.min.js"></script>
+    <script src="../static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../static/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../static/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="../static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template JavaScript -->
+    <script src="../static/js/main.js"></script>
+    <script type="module" src="../static/js/login.js"></script>
+</body>
+
+</html>

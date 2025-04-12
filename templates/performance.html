@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Information for browser rendering and SEO -->
+    <meta charset="utf-8">
+    <title>Detection and Identification of Pills</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon (Icon displayed on browser tab) -->
+    <link href="../static/img/favicon.png" rel="icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- External Libraries Stylesheets -->
+    <link href="../static/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Application-Specific Stylesheets -->
+    <link href="../static/css/performance.css" rel="stylesheet">
+    <link href="../static/css/common.css" rel="stylesheet">
+
+    <!-- Chatbot Integration Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script> <!-- For Markdown processing -->
+    <script src="https://karabo.ai/smart-js-chatbot-link/56ef5fe3-897b-4fa8-89c4-e3f642df290d/"></script> <!-- Chatbot integration -->
+
+</head>
+
+<body>
+    <!-- Spinner (Loading Animation) -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Navbar Section -->
+    <div class="navbar-container">
+        <nav class="navbar">
+            <!-- Hamburger Menu (For mobile devices) -->
+            <div class="hamburger-menu">
+                <img src="../static/img/hamburger.png" alt="Menu">
+            </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <a href="{{ url_for('index')}}"><li>Home</li></a>
+                <a href="{{ url_for('abstract')}}"><li>Abstract</li></a>
+                <a href="{{ url_for('blog')}}"><li>Blog</li></a>
+                <a href="{{ url_for('recognize')}}"><li>Recognize</li></a>
+                <a href="{{ url_for('performance')}}"><li>Performance</li></a>
+                <a href="{{ url_for('chart')}}"><li>Chart</li></a>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Page Header -->
+    <div class="container-fluid page-header mb-5 py-5">
+        <div class="container">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Performance Analysis</h1>
+        </div>
+    </div>
+
+    <!-- Performance Analysis Section -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-secondary text-uppercase">Detection and Identification of Pills</h6>
+                <h1 class="mb-5">Performance Analysis</h1>
+            </div>
+
+            <!-- Key Performance Metrics -->
+            <center>
+                <div>
+                    <div><span style="margin-left:50px;color:black"><font size="12">Accuracy:</font>
+                    <span style="margin-left:80px;color:black"><font size="12">0.996</font></div>
+                    <br/><br/>
+
+                    <div><span style="margin-left:50px;color:black"><font size="12">Precision:</font>
+                    <span style="margin-left:80px;color:black"><font size="12">1.00</font></div>
+                    <br/><br/>
+
+                    <div><span style="margin-left:50px;color:black"><font size="12">Recall:</font>
+                    <span style="margin-left:140px;color:black"><font size="12">0.996</font></div>
+                    <br/><br/>
+
+                    <div><span style="margin-left:50px;color:black"><font size="12">F-Measure:</font>
+                    <span style="margin-left:40px;color:black"><font size="12">0.996</font></div>
+                </div>
+            </center>
+
+            <!-- Confusion Matrix -->
+            <div class="col-lg-8 mx-auto">
+                <div><span style="margin-left:170px;color:red"><font size="12">Confusion Matrix</font></div>
+                <br/><br/>
+                <center>
+                    <div><img style="margin-left:-50px;width:800px;height:500px;" src="../static/confmatrix.png"></div>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Empty Footer Columns -->
+                <div class="col-lg-3 col-md-6"></div>
+                <div class="col-lg-3 col-md-6"></div>
+                <div class="col-lg-3 col-md-6"></div>
+                <div class="col-lg-3 col-md-6"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0"></div>
+                    <div class="col-md-6 text-center text-md-end"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/lib/wow/wow.min.js"></script>
+    <script src="../static/lib/easing/easing.min.js"></script>
+    <script src="../static/lib/waypoints/waypoints.min.js"></script>
+    <script src="../static/lib/counterup/counterup.min.js"></script>
+    <script src="../static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../static/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../static/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="../static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Main Template Script -->
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
